@@ -1,4 +1,6 @@
 # These ae my notes that I note as I relearn Rails
+To run rails app:
+    bin/rails server
 
 ## Database model
 Active record - maps ralational databases to ruby code, helps to generate sql for interacting with the database
@@ -59,3 +61,27 @@ Crud Routes:
 to create all routes: resources :routes i'e resources :products in routes.rb
 
 ### Controllers and Actions
+To generate a controller and controller:
+    bin/rails generate controller <Name> <Action>, i.e --- Products index
+The command creates controller itself, views folder for the controller, view file for the action we specified, test for the controller, helper  file for extracting logic in views
+
+ERB(Embedded Ruby) - allows to execute Ruby code to dynamically generate HTML
+    <%= %>, <%= debug %> print variables in yaml format to help in debugging
+
+Route prefixes provide helpers to use for generating URLs with Ruby code
+<prefix>_path returns a relative path which the browser understands for the current domain
+<prefix>_url returns full  URL inlcluding protocol and host
+
+#### Helpers
+`link_to` - it accepts the display content for the link and path/URL to link to for the href attribute
+`form_with` - generate html form,, handle csrf token, generate url based on model: ___ provided, tailor submit to the model
+`before_action` - extract shared code between actions and run it before the action
+
+Partials allow reusing a view in many places, _file.html.erb
+
+### Authentication
+    bin/rails generate authentication
+    bin/rails db:migrate
+
+### Caching
+using `cache` method
