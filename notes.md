@@ -85,3 +85,9 @@ Partials allow reusing a view in many places, _file.html.erb
 
 ### Caching
 using `cache` method
+
+### Rich text
+    bin/rails action_text:install
+    bundle install
+    bin/rails db:migrate
+### File uploads with active storage
