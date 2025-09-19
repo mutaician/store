@@ -90,4 +90,19 @@ using `cache` method
     bin/rails action_text:install
     bundle install
     bin/rails db:migrate
+- has_rich_text: content
 ### File uploads with active storage
+- has_one_attached :content
+### Internationalization (I18n)
+- using translate or t helper in views
+- edit or add files in /config/locales
+- and tell rails which locale to use in application controller
+- uses `local` params or fallback to default one 
+### stock notifications
+--> option to get notified when a product is back in stock
+Model relationships- 
+`belongs_to`, `has_many` - one to many 
+- Action Mailer is a feature that allows one to send emails 
+└─ bin/rails g mailer Product in_stock
+
+**Concern** - ruby module to make it easier to handle notifications
