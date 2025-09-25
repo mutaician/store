@@ -106,3 +106,17 @@ Model relationships-
 └─ bin/rails g mailer Product in_stock
 
 **Concern** - ruby module to make it easier to handle notifications
+
+### Adding CSS and Javascript
+- Propshaft is an asset pipeline that takes the css, js, imgs and other assets and seres them in the browser
+- rails uses importmaps for js `config/importmap.rb`
+- Hotwire is js framework to take full advantage of server-side generated html, comprised of: Turbo, Stimulus and Native
+
+### Testing 
+- Fixtures are predefined sets of data that populate the db before running tests
+
+### Consistently Formatted Code 
+- use bin/rubocop to check for consistensy, and with -a (autocorrect) flag to automatically fix offenses
+
+### Security
+- use `bin/brakeman` to check for security issues
